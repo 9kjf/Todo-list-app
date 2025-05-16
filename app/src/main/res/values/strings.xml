@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Makani</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="task_categories">
+        <item>Personal</item>
+        <item>Work</item>
+        <item>Study</item>
+        <item>Others</item>
+    </string-array>
+
+
+    <string-array name="task_priorities">
+        <item>Normal</item>
+        <item>Important</item>
+        <item>Very Important</item>
+    </string-array>
+    <string-array name="filter_options">
+        <item>All</item>
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+        <item>Study</item>
+        <item>Work</item>
+        <item>Personal</item>
+    </string-array>
+
+
+    <string-array name="task_colors">
+        <item>Pink</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
+
+</resources>
