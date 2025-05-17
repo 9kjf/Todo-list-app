@@ -87,7 +87,7 @@ class Addtask : AppCompatActivity() {
         if (taskId != null) {
             taskNameEditText.setText(intent.getStringExtra("taskName"))
             dueDateRaw = intent.getStringExtra("taskDueDate") ?: ""
-            dueDateTextView.text = "تم اختيار تاريخ سابق"
+            dueDateTextView.text = "already choosed date"
 
             val category = intent.getStringExtra("taskCategory")
             val priority = intent.getStringExtra("taskPriority")
@@ -119,9 +119,9 @@ class Addtask : AppCompatActivity() {
                     val diffDays = (diffMillis / (1000 * 60 * 60 * 24)).toInt()
 
                     dueDateTextView.text = when {
-                        diffDays > 0 -> "باقي $diffDays يوم"
-                        diffDays == 0 -> "اليوم هو الموعد النهائي!"
-                        else -> "انتهى موعد هذه المهمة"
+                        diffDays > 0 -> "$diffDays days left "
+                        diffDays == 0 -> "Today"
+                        else -> "Overdue"
                     }
                 },
                 calendar.get(Calendar.YEAR),
