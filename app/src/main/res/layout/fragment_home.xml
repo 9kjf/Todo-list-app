@@ -5,9 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/cutebackground">
 
-    <!-- RecyclerView لعرض المهام -->
 
-    <!-- زر الإضافة -->
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -26,16 +24,17 @@
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:layout_weight="1"
-            android:text="Your ToDo list"
+            android:text="Your Tasks"
             android:textColor="@color/buttonclr"
             android:textSize="30dp"
             android:textStyle="bold"
             android:layout_gravity="bottom"/>
 
         <Spinner
+            android:background="@color/pink"
             android:id="@+id/filterSpinner"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:entries="@array/filter_options"

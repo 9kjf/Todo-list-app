@@ -90,8 +90,6 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="4dp"/>
 
-
-
             <CheckBox
                 android:id="@+id/taskCheckBox"
                 android:layout_width="wrap_content"

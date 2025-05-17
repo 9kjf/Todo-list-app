@@ -30,12 +30,10 @@ class homeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-
         tasksRecyclerView = view.findViewById(R.id.tasksRecyclerView)
         fabAddTask = view.findViewById(R.id.fabAddTask)
         notifyBtn = view.findViewById(R.id.notifyBtn)
         filterSpinner = view.findViewById(R.id.filterSpinner)
-
         tasksRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         taskAdapter = TaskAdapter(taskList, requireContext())
         tasksRecyclerView.adapter = taskAdapter
@@ -59,7 +57,6 @@ class homeFragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             filterSpinner.adapter = adapter
         }
-
         filterSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>, view: View?, position: Int, id: Long

@@ -50,7 +50,6 @@ class VoiceNoteFragment : Fragment() {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ar-JO")
         }
-
         speechRecognizer.setRecognitionListener(object : RecognitionListener {
             override fun onResults(results: Bundle?) {
                 val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
@@ -60,11 +59,9 @@ class VoiceNoteFragment : Fragment() {
                     saveNoteToFirebase()
                 }
             }
-
             override fun onError(error: Int) {
                 Toast.makeText(requireContext(), "⚠️ حدث خطأ أثناء التسجيل", Toast.LENGTH_SHORT).show()
             }
-
             override fun onReadyForSpeech(params: Bundle?) {}
             override fun onBeginningOfSpeech() {}
             override fun onRmsChanged(rmsdB: Float) {}
@@ -95,10 +92,10 @@ class VoiceNoteFragment : Fragment() {
             val noteId = database.push().key ?: return
             database.child(noteId).setValue(noteText)
                 .addOnSuccessListener {
-                    Toast.makeText(requireContext(), "✅ تم حفظ الملاحظة", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Savedة", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener {
-                    Toast.makeText(requireContext(), "❌ فشل في حفظ الملاحظة", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Fail to save note", Toast.LENGTH_SHORT).show()
                 }
         }
     }
