@@ -100,7 +100,6 @@ class StatsFragment : Fragment() {
                 pieChart.invalidate()
 
             }
-
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(requireContext(), "Fail in loading stats", Toast.LENGTH_SHORT).show()
             }

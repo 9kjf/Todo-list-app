@@ -57,6 +57,7 @@ class homeFragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             filterSpinner.adapter = adapter
         }
+
         filterSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>, view: View?, position: Int, id: Long
@@ -99,7 +100,7 @@ class homeFragment : Fragment() {
         val filtered = allTasks.filter { task ->
             when (selected) {
                 "All" -> true
-                "High", "Medium", "Low" -> task.priority.equals(selected, true)
+                "Very Important", "Important", "Normal" -> task.priority.equals(selected, true)
                 "Study", "Work", "Personal" -> task.category.equals(selected, true)
                 else -> true
             }
