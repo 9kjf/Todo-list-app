@@ -51,7 +51,7 @@ class TaskAdapter(private val taskList: List<Task>, private val context: android
 
 
 
-        // حساب الأيام المتبقية
+       //count
         val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         try {
             val dueDateParsed = dateFormat.parse(task.dueDate)
@@ -86,8 +86,6 @@ class TaskAdapter(private val taskList: List<Task>, private val context: android
             dbRef.child("isDone").setValue(isChecked).addOnSuccessListener {
                 val msg = if (isChecked) "Task marked as Done ✔️" else "Task marked as not done"
                 Toast.makeText(holder.itemView.context, msg, Toast.LENGTH_SHORT).show()
-
-                // ✨ التكرار
                 if (isChecked && task.recurrence != "None") {
                     val newId = FirebaseDatabase.getInstance().getReference("tasks").push().key!!
                     val newDueDate = calculateNextDate(task.dueDate, task.recurrence)

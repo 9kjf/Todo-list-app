@@ -66,7 +66,7 @@ class StatsFragment : Fragment() {
 
 
                 val legend = pieChart.legend
-                legend.isEnabled = true  // شغّل الليجند
+                legend.isEnabled = true
                 legend.form = Legend.LegendForm.CIRCLE
                 legend.textSize = 14f
                 legend.textColor = Color.BLACK
@@ -83,9 +83,9 @@ class StatsFragment : Fragment() {
 
                 val dataSet = PieDataSet(entries, "")
                 dataSet.colors = listOf(
-                    Color.parseColor("#4CAF50"), // أخضر
-                    Color.parseColor("#FFC107"), // أصفر
-                    Color.parseColor("#F44336")  // أحمر
+                    Color.parseColor("#4CAF50"),
+                    Color.parseColor("#FFC107"),
+                    Color.parseColor("#F44336")
                 )
 
                 val data = PieData(dataSet)

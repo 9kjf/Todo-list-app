@@ -131,7 +131,6 @@ class Addtask : AppCompatActivity() {
             )
             datePicker.show()
         }
-
         addTaskButton.setOnClickListener {
             val taskName = taskNameEditText.text.toString()
             val category = categorySpinner.selectedItem.toString()
