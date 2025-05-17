@@ -40,11 +40,10 @@ class Addtask : AppCompatActivity() {
         editSubtask = findViewById(R.id.editSubtask)
         btnAddSubtask = findViewById(R.id.btnAddSubtask)
         listSubtasks = findViewById(R.id.listSubtasks)
-
+        recurrenceSpinner = findViewById(R.id.recurrenceSpinner)
         subtaskAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, subtasks)
         listSubtasks.adapter = subtaskAdapter
 
-        recurrenceSpinner = findViewById(R.id.recurrenceSpinner)
 
         val recurrenceOptions = listOf("None", "Daily", "Weekly", "Monthly")
         val recurrenceAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, recurrenceOptions)
