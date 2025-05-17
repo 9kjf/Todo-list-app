@@ -86,13 +86,17 @@ class homeFragment : Fragment() {
                     val task = snap.getValue(Task::class.java)
                     task?.let { tasks.add(it) }
                 }
+
                 allTasks = tasks
+                taskList.clear()
+                taskList.addAll(tasks)
                 applyFilter(filterSpinner.selectedItem.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
     }
+
 
     private fun applyFilter(selected: String) {
         val filtered = allTasks.filter { task ->

@@ -31,7 +31,7 @@
         android:layout_marginTop="116dp"
         android:layout_marginBottom="578dp"
         android:gravity="center"
-        android:text="Todo lis App"
+        android:text="Todo list App"
         android:textColor="@color/white"
         android:textSize="27dp"
         android:textStyle="bold" />
@@ -71,7 +71,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="77dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="560dp"
         android:layout_marginEnd="78dp"
         android:backgroundTint="@color/buttonclr"
         android:text="Get Started"
