@@ -14,8 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import java.util.*
-
+//works
 class VoiceNoteFragment : Fragment() {
 
     private lateinit var speechRecognizer: SpeechRecognizer
@@ -60,7 +59,7 @@ class VoiceNoteFragment : Fragment() {
                 }
             }
             override fun onError(error: Int) {
-                Toast.makeText(requireContext(), "⚠️ حدث خطأ أثناء التسجيل", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
             }
             override fun onReadyForSpeech(params: Bundle?) {}
             override fun onBeginningOfSpeech() {}
@@ -92,7 +91,7 @@ class VoiceNoteFragment : Fragment() {
             val noteId = database.push().key ?: return
             database.child(noteId).setValue(noteText)
                 .addOnSuccessListener {
-                    Toast.makeText(requireContext(), "Savedة", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Saved", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener {
                     Toast.makeText(requireContext(), "Fail to save note", Toast.LENGTH_SHORT).show()
