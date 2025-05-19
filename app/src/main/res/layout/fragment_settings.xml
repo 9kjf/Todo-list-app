@@ -2,25 +2,76 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cutebackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     android:padding="24dp">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- عنوان -->
-        <TextView
-            android:id="@+id/settings_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Settings"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:textColor="@color/buttonclr"
-            android:layout_marginBottom="32dp" />
 
+        <!-- عنوان -->
+
+        <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Settings"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/buttonclr"
+        android:layout_marginBottom="32dp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="fill"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_manage_accounts_24"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit Profile"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/buttonclr"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="fill"
+            android:paddingVertical="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_lock_24"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Privacy"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/buttonclr"/>
+
+        </LinearLayout>
         <!-- الوضع الداكن -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,11 +80,16 @@
             android:gravity="fill"
             android:paddingVertical="16dp">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_dark_mode_24"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Dark Mode"
+                android:layout_marginStart="5dp"
                 android:textSize="18sp"
                 android:textColor="@color/buttonclr" />
 
@@ -41,6 +97,7 @@
                 android:id="@+id/dark_mode_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
         </LinearLayout>
 
         <!-- تغيير اللغة -->
@@ -51,11 +108,16 @@
             android:gravity="fill"
             android:paddingVertical="16dp">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_language_24"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="App Language"
+                android:layout_marginStart="5dp"
                 android:textSize="18sp"
                 android:textColor="@color/buttonclr"/>
 
@@ -73,10 +135,15 @@
             android:gravity="fill"
             android:paddingVertical="16dp">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notifications2"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginStart="5dp"
                 android:text="Enable Notifications"
                 android:textSize="18sp"
                 android:textColor="@color/buttonclr" />

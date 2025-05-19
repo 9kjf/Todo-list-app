@@ -6,9 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:paddingRight="16dp"
     android:paddingLeft="16dp"
-    android:paddingTop="20dp"
+    android:paddingTop="50dp"
     tools:context=".Addtask"
-    android:background="@drawable/cutebackground">
+    android:background="@drawable/bluebackground">
 
 
     <androidx.cardview.widget.CardView
@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="16dp"
+
             />
         <Spinner
             android:id="@+id/recurrenceSpinner"
@@ -65,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Date"
-            android:textColor="@color/black"
+            android:textColor="@color/buttonclr"
             android:padding="12dp"
             android:background="@android:drawable/edit_text"
             android:gravity="center_vertical"
@@ -76,12 +77,13 @@
             android:id="@+id/colorSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/task_colors"/>
+            android:entries="@array/task_colors" />
         <EditText
             android:id="@+id/editSubtask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="أضف Subtask" />
+            android:hint="Add Subtask"
+            />
 
         <Button
             android:id="@+id/btnAddSubtask"
@@ -94,7 +96,7 @@
         <ListView
             android:id="@+id/listSubtasks"
             android:layout_width="match_parent"
-            android:layout_height="150dp" />
+            android:layout_height="50dp" />
 
         <!-- زر إضافة المهمة -->
         <Button

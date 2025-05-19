@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/cutebackground">
+    android:background="@color/background">
 <LinearLayout
-    android:paddingTop="50dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
     <EditText
         android:id="@+id/voiceResultText"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="550dp"
         android:hint="Type or recored your thoughts here"
         android:minHeight="150dp"
         android:gravity="center"
         android:background="@color/white"
         android:padding="12dp"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        />
 
     <TextView
         android:layout_width="match_parent"

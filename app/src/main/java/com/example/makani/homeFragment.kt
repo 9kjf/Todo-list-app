@@ -16,7 +16,7 @@ import com.google.firebase.database.*
 import java.util.*
 //works
 class homeFragment : Fragment() {
-    private lateinit var notifyBtn: ImageButton
+    private lateinit var notifyBtn: FloatingActionButton
     private lateinit var tasksRecyclerView: RecyclerView
     private lateinit var fabAddTask: FloatingActionButton
     private lateinit var databaseRef: DatabaseReference

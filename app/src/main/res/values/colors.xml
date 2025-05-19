@@ -3,12 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="darkerwhite">#DBD7D7</color>
-    <color name="pink">#F8BBD0</color>
+    <color name="pink">#F0D8E2</color>
     <color name="blue">#BBDEFB</color>
     <color name="green">#C8E6C9</color>
 
-    <color name="background">#EFC3CA</color>
-    <color name="buttonclr">#C98895</color>
+    <color name="background">#B3D9D9</color>
+    <color name="buttonclr">#5F9EA0</color>
     <color name="Chab">#FFF5F6</color>
 
 
